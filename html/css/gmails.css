@@ -9,6 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
+        width:79%;
 }
 
 .firstNav {
@@ -41,7 +42,8 @@ body {
 }
 
 .iconImg {
-	height: 15px width:15px;
+	height: 15px;
+        width:15px;
 }
 
 .iconText {
@@ -76,20 +78,20 @@ body {
 
 .main {
 	height: auto;
-	width: 100%;
+	width: 95%;
 	display: flex;
 }
 
 .mainSection {
 	margin-left: 77px;
-	width: 1270;
+	width:74%;
 	height: 610px;
 	margin-top: -610px;
 	background: #f8fafd;
 }
 
 .headerSection {
-	width: 1270px;
+	width: 95%;
 	height: 55px;
 	margin-top: 5px;
 }
@@ -133,7 +135,7 @@ body {
 	display: none;
 }
 
-.searchLogo {
+.searchLogo,.searchLogo1 {
 	margin-left: 285px;
 	height: 25px;
 	width: 25px;
@@ -202,7 +204,7 @@ body {
 	margin-top: -40px;
 	width: 125px;
 	border: 1px solid #dadce0;
-	;
+	
 }
 
 .techLogo {
@@ -350,11 +352,6 @@ body {
 	margin-top: 20px;
 }
 
-.mainText {
-	margin-left: 330px;
-	margin-top: 8px;
-}
-
 .mainLeftIcon,
 .mainRightIcon {
 	width: 21px;
@@ -362,7 +359,10 @@ body {
 	margin-top: 9px;
 	margin-left: 10px;
 }
-
+.mainText1{
+        margin-left:500px;
+        margin-top:10px;
+}
 /*.mailMessage{
   overflow-y:scroll;
   overflow-x:hidden;
@@ -371,7 +371,7 @@ body {
 .mailBox {
 	margin-top: 0px;
 	height: 50px;
-	width: auto;
+	width: 980px;
 	display: flex;
 	background: #e9eef6;
 	margin-left: 0px;
@@ -428,10 +428,10 @@ body {
 }
 
 .lastNav {
-	height: 545px;
+	height: 450px;
 	width: 70px;
-	margin-left: 1200px;
-	margin-top: -720px;
+	margin-left: 1180px;
+	margin-top: -640px;
 	background: #f8fafd;
 }
 
@@ -440,7 +440,7 @@ body {
 	width: 20px;
 	margin-left: 20px;
 	padding-top: 25px;
-	margin-top: 20px;
+	margin-top:20px;
 	color: #c4c7c5;
 }
 
@@ -483,16 +483,24 @@ body {
 .logoSection {
 	display: none;
 }
+.logoMail {
+	display: none;
+}
+/*Media Query : mobile view*/
 
-/*Media Query*/
-
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 425px) {
+        
+        .body{
+                width:100%;
+                height:360px;
+        }
 	.searchTopsection {
 		display: block;
 		height: 40px;
-		width: 100%;
-		margin-top: 0px;
-		background-color: #e9eef6;
+		width: 70%;
+		margin-top: 60px;
+		background-color: #e9eef6;  
+                position:fixed;                      
 	}
 
 	.iconToggle {
@@ -520,8 +528,9 @@ body {
 		height: 25px;
 		width: 25px;
 		background-color: red;
-		margin-left: 300px;
+		margin-left: 80%;
 		margin-top: -15px;
+                /*flex-growth:1;*/
 	}
 
 	.iconCompose {
@@ -532,12 +541,12 @@ body {
 	}
 
 	.logoSection {
-		width: 100%;
-		height: 40px;
-		border: 1px solid black;
+		width:100%;
+		height: 60px;  
 		display: block;
 		margin-top: 0px;
 		background-color: #f0f4f9;
+                position:fixed;
 	}
 
 	.logoMail {
@@ -547,10 +556,6 @@ body {
 
 	.firstNav {
 		display: none;
-	}
-
-	.mainSection {
-		margin-top: 0px;
 	}
 
 	.mainLogo {
@@ -593,24 +598,29 @@ body {
 		display: none;
 	}
 
-	/*.composeButton{
-    width: 145px;
-    height: 55px;
-    background: #c2e7ff;
-    border-radius: 20px;
-    margin-left: -73px;
-    margin-top:250px;
-    text-decoration: none;
-    color: black;
-  }*/
+	
 	.composeButton {
 		display: none;
 	}
-
+        .main{
+                width:100%;
+                margin-top:50px;
+        }
 	.mainContent {
-		margin-left: -143px;
-		margin-top: -27px;
-		width: 385%;
+		margin-right: 70%;
+		margin-top: -10px;
+		width:70%;
+	}
+       
+        .mainSection{
+                margin-left:10%;          
+                width:50%;
+                margin-top:10px;
+        } 
+        .mailDate {
+		font-size: 12px;
+		margin-top: 17px;
+		margin-left: 20px;
 	}
 
 	.mainRow1 {
@@ -621,28 +631,31 @@ body {
 		display: none;
 	}
 
-	.mailMessage {
+	.mailBox {
 		margin-top: 10px;
+                width:340px;
+                margin-left:-20px;
 	}
 
 	.headerSection {
 		margin-top: -30px;
-		width: 100%;
+		width: 70%;
+                margin-bottom:10px;
+                margin-left:-10px;
 	}
 
 	.searchBar {
-		margin-left: -70px;
+		margin-left: -60px;
 		margin-top: 30px;
 		width: 330px;
-		border-radius: 0px;
-		background-color: white;
+		border-radius:0px;
 		height: 20px;
 	}
 
 	.searchText1 {
 		color: #747775;
 		font-sixe: 20px;
-		margin-left: 45px;
+		margin-left:67px;
 		margin-top: -32px;
 		display: block;
 	}
@@ -684,15 +697,131 @@ body {
 		font-size: 12px;
 		padding-top: 10px;
 		display: block;
-	}
-
-	.mailDate {
-		font-size: 12px;
-		margin-top: 17px;
-		margin-left: 20px;
+                width:70%;
 	}
 
 	.footer {
 		display: none;
 	}
+        .headerSection{
+                width:100px;
+        }
+        .mailMessage{
+                width:100%
+        }
+}
+
+/*Media Query*/
+
+@media screen and (max-width:960px) {
+       
+        .searchBar{
+              width:250px;
+        }
+        .searchLogo{
+               display:none;
+        }
+        .mailDate{
+              display:none;
+        }
+
+}
+
+/*Media Query*/
+
+
+@media screen and (max-width:768px) {
+         *{
+                  font-size:10px;
+         }
+         .body{
+                   width:600px;
+         }
+         .main{
+                   width:70%;
+         }
+         .mainSection{
+                   width:650px;
+                 
+         }
+         .activeSection{ 
+                   width:35px;
+                   border-radius:50%;  
+                   margin-left:50%;            
+         }
+         .bulletComp{ 
+                    display:block;
+         }
+         .activeText{ 
+                  display:none;
+         }
+         .activeLogo{ 
+                  display:none;
+         }
+         .iconHeader1{
+                  margin-left: 70%;
+         }
+         .iconHeader2{
+                  margin-left: 75%;
+         }
+         .iconHeader3{
+                  margin-left: 80%;
+         }
+         .headerButton{
+                  margin-left: 85%;
+         }
+         .lastNav{
+                  display:none;
+         }
+         .footer{
+                  display:none;
+         }
+         .maincontent{
+                  width:85%;
+                  margin-left:10px;
+                  padding-right:100px;                 
+         }   
+         .mailDate{
+                  padding-right:10px;
+         }  
+         .containerClass{
+                  width:90%;
+         }
+         .searchBar{
+                 width:7%;
+                 border-radius:50%;
+                 background-color:wgite;
+         }
+         .searchText{
+                  display:none;
+         }
+         .searchGlass{
+                  height:30px;
+                  width:20px;
+         }
+         .searchLogo{
+                  display:none;
+         }
+         .labelIcon{
+                  margin-left:65%;
+         }
+         .mailBox{
+                   margin-left:-45px;
+                   width:550px;             
+         }
+         .mainRow1{
+                   margin-left:-45px;
+                   background-color:white;
+         }
+         .mainLeftIcon,
+         .mainRightIcon {
+	
+	           margin-top: 9px;
+	           margin-left:- 10px;
+        }
+        .mainText1{
+                   margin-left:200px;
+                   margin-top:15px;
+        }
+         
 }
